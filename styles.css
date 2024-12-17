@@ -1,0 +1,561 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #9DCDA6; /* Grøn baggrund */
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #9DCDA6;
+  }
+  .logo-link {
+    text-decoration: none; /* Fjern understregning */
+    color: inherit; /* Bevar tekstfarven */
+}
+
+.logo-link:hover {
+    cursor: pointer;
+}
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: #F73D93;
+  }
+  
+  .save-star {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Burger Menu */
+  .burger-menu {
+    position: relative;
+  }
+  
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+  }
+  
+  /* Dropdown Menu */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #A36AB9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    z-index: 100;
+  }
+  
+  .menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .menu a:hover {
+    background-color: #F73D93;
+  }
+  
+  .burger-icon:hover .menu {
+    display: block;
+  }
+  
+  /* Image and Text Section */
+  .image-text-section {
+    display: flex;
+    align-items: stretch; /* Sikrer at boksene er lige høje */
+    margin: 20px;
+  }
+  
+  .text-box {
+    background-color: #A36AB9; /* Lilla baggrund */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .image-box {
+    flex: 1;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 100%; /* Sørger for, at billedet fylder sin plads */
+    object-fit: cover;
+  }
+  
+  /* Pink Strip */
+  .pink-strip {
+    background-color: #F73D93;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    cursor: not-allowed;
+    margin: 20px 0;
+  }
+  
+  /* Gallery */
+  .gallery {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  .gallery-item {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .gallery-item p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+  /* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+  
+  /* Events Grid */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  .event {
+    text-align: center;
+  }
+  
+  .event img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .event p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  /* Coming Soon */
+  .coming-soon {
+    text-align: center;
+    font-size: 2rem;
+    color: #F73D93;
+  }
+  
+  .coming-soon span {
+    color: #6C63FF;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #A36AB9;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer input, .footer button {
+    margin-top: 5px;
+    padding: 5px;
+  }
+ NYT  CSS
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    color: #333;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .save-star {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Burger Menu */
+  .burger-menu {
+    position: relative;
+  }
+  
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .burger-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    border-radius: 3px;
+  }
+  
+  /* Dropdown Menu */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    width: 150px;
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu a {
+    display: block;
+    padding: 0.75rem;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .menu a:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .burger-menu:hover .menu {
+    display: block; /* Vises ved hover */
+  }
+  
+  /* Loyalitetsinfo */
+  .loyalitets-info {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    margin-bottom: 2rem;
+  }
+  
+  .loyalitets-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .loyalitets-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Grid med Billeder */
+  .images-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  
+  .images-section .grid-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .images-section .grid-container .image {
+    width: 30%;
+  }
+  
+  .images-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Abonnement Sektion */
+  .abonnement-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .abonnement-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .abonnement-box {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+  
+  .abonnement-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .abonnement-box p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .abonnement-box .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .abonnement-box button {
+    background-color: #3c9dff;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .abonnement-box button:hover {
+    background-color: #2a7db0;
+  }
+  
+ /* Footer */
+.footer {
+    background-color: #6a4c9c; /* Lilla farve */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .footer h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer .newsletter input,
+  .footer .newsletter button {
+    padding: 0.7rem;
+    margin-top: 1rem;
+  }
+  
+  .footer .social-media a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  RADARS Galleri
+/* Generel styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #8b9c85;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+.burger-menu .burger-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+.logo-link {
+    text-decoration: none; /* Fjern understregning */
+    color: inherit; /* Bevar tekstfarven */
+}
+
+.logo-link:hover {
+    cursor: pointer;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo .fanclub {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5rem;
+}
+
+.menu-links .star {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Hero-billede fylder 60% af skærmhøjden */
+    background-image: url('hero-image.jpg'); /* Indsæt dit store billede her */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Lidt skygge for bedre synlighed */
+}
+
+/* Introduktionstekst */
+.intro-text {
+    text-align: center;
+    margin: 2rem 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Galleri */
+.gallery {
+    padding: 0; /* Fjern padding */
+    margin: 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    gap: 0; /* Ingen mellemrum mellem billederne */
+}
+
+.gallery-grid img {
+    width: 100%; /* Fyld hele bredden */
+    height: 100%; /* Fyld hele højden af grid-cellen */
+    object-fit: cover; /* Sikrer at billeder ikke strækkes */
+    display: block;
+}
+
+/* Footer */
+.footer {
+    background-color: #5c45aa; /* Lilla baggrund */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer button {
+    padding: 0.5rem 1rem;
+    background-color: #3cb4f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
